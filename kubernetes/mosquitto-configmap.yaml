@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mosquitto-config
+data:
+  mosquitto.conf: |
+    persistence true
+    persistence_location /home/k8smaster1/programdata/mosquitto
+    log_dest file /mosquitto/log/mosquitto.log
+    listener 4038
+    cafile /workspace/mosquitto_kubernetes/certs/ca.crt
+    certfile /workspace/mosquitto_kubernetes/certs/server.crt
+    keyfile /workspace/mosquitto_kubernetes/certs/server.key
