@@ -9,3 +9,4 @@ spec:
     - protocol: TCP
       port: 4038
       targetPort: 4038
+  type: NodePort
